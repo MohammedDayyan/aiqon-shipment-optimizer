@@ -1,0 +1,1891 @@
+[
+    {
+        "shipment_id": "SHP-1001",
+        "cargo_type": "Hazardous",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R1-1",
+                "origin": "Singapore",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 7487.65,
+                "base_transit_time": 28.4,
+                "delay_probability": 0.37,
+                "estimated_delay_duration": 1.7,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R1-2",
+                "origin": "Singapore",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 12705.68,
+                "base_transit_time": 23.6,
+                "delay_probability": 0.08,
+                "estimated_delay_duration": 3.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R1-3",
+                "origin": "Singapore",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 7337.45,
+                "base_transit_time": 17.9,
+                "delay_probability": 0.24,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R1-4",
+                "origin": "Singapore",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 9077.71,
+                "base_transit_time": 14.6,
+                "delay_probability": 0.33,
+                "estimated_delay_duration": 2.8,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1002",
+        "cargo_type": "Perishable",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R2-1",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 7550.29,
+                "base_transit_time": 5.1,
+                "delay_probability": 0.42,
+                "estimated_delay_duration": 2.9,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R2-2",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 7319.98,
+                "base_transit_time": 8.1,
+                "delay_probability": 0.12,
+                "estimated_delay_duration": 3.5,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R2-3",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 4555.28,
+                "base_transit_time": 27.4,
+                "delay_probability": 0.35,
+                "estimated_delay_duration": 4.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R2-4",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 3688.42,
+                "base_transit_time": 10.4,
+                "delay_probability": 0.39,
+                "estimated_delay_duration": 1.4,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1003",
+        "cargo_type": "Hazardous",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R3-1",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 5460.36,
+                "base_transit_time": 22.7,
+                "delay_probability": 0.29,
+                "estimated_delay_duration": 4.3,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R3-2",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 7975.53,
+                "base_transit_time": 25.6,
+                "delay_probability": 0.15,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R3-3",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 11274.34,
+                "base_transit_time": 12.2,
+                "delay_probability": 0.23,
+                "estimated_delay_duration": 2.6,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R3-4",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 11481.29,
+                "base_transit_time": 22.7,
+                "delay_probability": 0.33,
+                "estimated_delay_duration": 3.2,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1004",
+        "cargo_type": "High-Value",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R4-1",
+                "origin": "Rotterdam",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 14218.27,
+                "base_transit_time": 14.8,
+                "delay_probability": 0.05,
+                "estimated_delay_duration": 5.0,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R4-2",
+                "origin": "Rotterdam",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 10541.24,
+                "base_transit_time": 10.7,
+                "delay_probability": 0.29,
+                "estimated_delay_duration": 1.3,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R4-3",
+                "origin": "Rotterdam",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 3200.33,
+                "base_transit_time": 20.9,
+                "delay_probability": 0.42,
+                "estimated_delay_duration": 3.4,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R4-4",
+                "origin": "Rotterdam",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 9401.13,
+                "base_transit_time": 20.0,
+                "delay_probability": 0.29,
+                "estimated_delay_duration": 4.1,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1005",
+        "cargo_type": "High-Value",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R5-1",
+                "origin": "Dubai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 12058.24,
+                "base_transit_time": 16.9,
+                "delay_probability": 0.17,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R5-2",
+                "origin": "Dubai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 3686.51,
+                "base_transit_time": 10.1,
+                "delay_probability": 0.16,
+                "estimated_delay_duration": 1.1,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R5-3",
+                "origin": "Dubai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 6153.95,
+                "base_transit_time": 16.0,
+                "delay_probability": 0.25,
+                "estimated_delay_duration": 3.5,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R5-4",
+                "origin": "Dubai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 6946.0,
+                "base_transit_time": 16.0,
+                "delay_probability": 0.44,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1006",
+        "cargo_type": "Perishable",
+        "priority_profile": "budget_optimized",
+        "routes": [
+            {
+                "route_id": "R6-1",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 12824.93,
+                "base_transit_time": 8.3,
+                "delay_probability": 0.36,
+                "estimated_delay_duration": 2.3,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R6-2",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 3787.31,
+                "base_transit_time": 14.6,
+                "delay_probability": 0.24,
+                "estimated_delay_duration": 2.3,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R6-3",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 11838.33,
+                "base_transit_time": 11.2,
+                "delay_probability": 0.21,
+                "estimated_delay_duration": 3.9,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R6-4",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 11405.06,
+                "base_transit_time": 13.1,
+                "delay_probability": 0.35,
+                "estimated_delay_duration": 3.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R6-5",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 4921.51,
+                "base_transit_time": 19.2,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1007",
+        "cargo_type": "Perishable",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R7-1",
+                "origin": "Los Angeles",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 5133.9,
+                "base_transit_time": 28.4,
+                "delay_probability": 0.24,
+                "estimated_delay_duration": 3.8,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R7-2",
+                "origin": "Los Angeles",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 8939.92,
+                "base_transit_time": 23.9,
+                "delay_probability": 0.37,
+                "estimated_delay_duration": 2.6,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R7-3",
+                "origin": "Los Angeles",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 5590.64,
+                "base_transit_time": 9.0,
+                "delay_probability": 0.35,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1008",
+        "cargo_type": "Perishable",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R8-1",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 8512.86,
+                "base_transit_time": 5.7,
+                "delay_probability": 0.07,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R8-2",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 6644.6,
+                "base_transit_time": 8.2,
+                "delay_probability": 0.2,
+                "estimated_delay_duration": 1.1,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R8-3",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 4935.72,
+                "base_transit_time": 21.4,
+                "delay_probability": 0.05,
+                "estimated_delay_duration": 4.9,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R8-4",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 11110.46,
+                "base_transit_time": 26.7,
+                "delay_probability": 0.25,
+                "estimated_delay_duration": 1.8,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R8-5",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 10407.46,
+                "base_transit_time": 6.3,
+                "delay_probability": 0.23,
+                "estimated_delay_duration": 1.7,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1009",
+        "cargo_type": "Hazardous",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R9-1",
+                "origin": "Hamburg",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 4935.08,
+                "base_transit_time": 19.7,
+                "delay_probability": 0.42,
+                "estimated_delay_duration": 3.1,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R9-2",
+                "origin": "Hamburg",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 10788.45,
+                "base_transit_time": 28.3,
+                "delay_probability": 0.24,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R9-3",
+                "origin": "Hamburg",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 14621.59,
+                "base_transit_time": 14.3,
+                "delay_probability": 0.32,
+                "estimated_delay_duration": 4.0,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R9-4",
+                "origin": "Hamburg",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 4619.36,
+                "base_transit_time": 23.7,
+                "delay_probability": 0.34,
+                "estimated_delay_duration": 3.7,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R9-5",
+                "origin": "Hamburg",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 8972.83,
+                "base_transit_time": 23.6,
+                "delay_probability": 0.11,
+                "estimated_delay_duration": 1.4,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1010",
+        "cargo_type": "High-Value",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R10-1",
+                "origin": "Rotterdam",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 7956.12,
+                "base_transit_time": 8.2,
+                "delay_probability": 0.15,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R10-2",
+                "origin": "Rotterdam",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 5025.17,
+                "base_transit_time": 10.3,
+                "delay_probability": 0.27,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R10-3",
+                "origin": "Rotterdam",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 6543.09,
+                "base_transit_time": 17.9,
+                "delay_probability": 0.32,
+                "estimated_delay_duration": 4.8,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R10-4",
+                "origin": "Rotterdam",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 14452.84,
+                "base_transit_time": 26.0,
+                "delay_probability": 0.14,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1011",
+        "cargo_type": "General",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R11-1",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 5379.8,
+                "base_transit_time": 13.0,
+                "delay_probability": 0.36,
+                "estimated_delay_duration": 3.3,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R11-2",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 14502.84,
+                "base_transit_time": 30.0,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 4.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R11-3",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 3736.61,
+                "base_transit_time": 11.3,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 3.4,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R11-4",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 7146.94,
+                "base_transit_time": 7.7,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 3.3,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R11-5",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 3225.75,
+                "base_transit_time": 25.0,
+                "delay_probability": 0.32,
+                "estimated_delay_duration": 3.5,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1012",
+        "cargo_type": "Hazardous",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R12-1",
+                "origin": "Dubai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 13536.23,
+                "base_transit_time": 21.7,
+                "delay_probability": 0.07,
+                "estimated_delay_duration": 3.2,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R12-2",
+                "origin": "Dubai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 11490.53,
+                "base_transit_time": 29.9,
+                "delay_probability": 0.09,
+                "estimated_delay_duration": 2.1,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R12-3",
+                "origin": "Dubai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 4494.28,
+                "base_transit_time": 22.1,
+                "delay_probability": 0.21,
+                "estimated_delay_duration": 4.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R12-4",
+                "origin": "Dubai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 6644.29,
+                "base_transit_time": 27.5,
+                "delay_probability": 0.39,
+                "estimated_delay_duration": 4.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R12-5",
+                "origin": "Dubai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 11152.84,
+                "base_transit_time": 20.7,
+                "delay_probability": 0.36,
+                "estimated_delay_duration": 4.7,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1013",
+        "cargo_type": "General",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R13-1",
+                "origin": "Singapore",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 9083.05,
+                "base_transit_time": 7.8,
+                "delay_probability": 0.09,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R13-2",
+                "origin": "Singapore",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 8949.13,
+                "base_transit_time": 19.6,
+                "delay_probability": 0.35,
+                "estimated_delay_duration": 3.9,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R13-3",
+                "origin": "Singapore",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 13251.25,
+                "base_transit_time": 19.2,
+                "delay_probability": 0.28,
+                "estimated_delay_duration": 4.3,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1014",
+        "cargo_type": "Hazardous",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R14-1",
+                "origin": "Los Angeles",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 4607.81,
+                "base_transit_time": 22.2,
+                "delay_probability": 0.08,
+                "estimated_delay_duration": 2.3,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R14-2",
+                "origin": "Los Angeles",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 4340.81,
+                "base_transit_time": 12.3,
+                "delay_probability": 0.42,
+                "estimated_delay_duration": 4.8,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R14-3",
+                "origin": "Los Angeles",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 9165.75,
+                "base_transit_time": 13.5,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 4.6,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1015",
+        "cargo_type": "High-Value",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R15-1",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 7220.78,
+                "base_transit_time": 7.6,
+                "delay_probability": 0.37,
+                "estimated_delay_duration": 1.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R15-2",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 3274.04,
+                "base_transit_time": 8.7,
+                "delay_probability": 0.13,
+                "estimated_delay_duration": 2.6,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R15-3",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 4501.74,
+                "base_transit_time": 28.5,
+                "delay_probability": 0.1,
+                "estimated_delay_duration": 4.8,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R15-4",
+                "origin": "Hamburg",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 3936.09,
+                "base_transit_time": 23.5,
+                "delay_probability": 0.09,
+                "estimated_delay_duration": 2.9,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1016",
+        "cargo_type": "General",
+        "priority_profile": "budget_optimized",
+        "routes": [
+            {
+                "route_id": "R16-1",
+                "origin": "Singapore",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 3496.78,
+                "base_transit_time": 8.5,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 2.1,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R16-2",
+                "origin": "Singapore",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 13003.0,
+                "base_transit_time": 17.5,
+                "delay_probability": 0.13,
+                "estimated_delay_duration": 1.9,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R16-3",
+                "origin": "Singapore",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 6734.88,
+                "base_transit_time": 21.4,
+                "delay_probability": 0.26,
+                "estimated_delay_duration": 2.9,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R16-4",
+                "origin": "Singapore",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 3615.54,
+                "base_transit_time": 19.7,
+                "delay_probability": 0.22,
+                "estimated_delay_duration": 1.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R16-5",
+                "origin": "Singapore",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 9956.9,
+                "base_transit_time": 8.1,
+                "delay_probability": 0.3,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1017",
+        "cargo_type": "Hazardous",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R17-1",
+                "origin": "Hamburg",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 6632.6,
+                "base_transit_time": 29.2,
+                "delay_probability": 0.05,
+                "estimated_delay_duration": 4.0,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R17-2",
+                "origin": "Hamburg",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 7770.51,
+                "base_transit_time": 12.2,
+                "delay_probability": 0.18,
+                "estimated_delay_duration": 4.7,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R17-3",
+                "origin": "Hamburg",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 10182.36,
+                "base_transit_time": 13.1,
+                "delay_probability": 0.34,
+                "estimated_delay_duration": 3.7,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R17-4",
+                "origin": "Hamburg",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 5918.03,
+                "base_transit_time": 29.7,
+                "delay_probability": 0.29,
+                "estimated_delay_duration": 3.1,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1018",
+        "cargo_type": "Hazardous",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R18-1",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 3821.26,
+                "base_transit_time": 28.1,
+                "delay_probability": 0.12,
+                "estimated_delay_duration": 3.1,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R18-2",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 11349.23,
+                "base_transit_time": 6.2,
+                "delay_probability": 0.13,
+                "estimated_delay_duration": 1.9,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R18-3",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 11396.27,
+                "base_transit_time": 5.4,
+                "delay_probability": 0.27,
+                "estimated_delay_duration": 1.1,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1019",
+        "cargo_type": "High-Value",
+        "priority_profile": "budget_optimized",
+        "routes": [
+            {
+                "route_id": "R19-1",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 8422.12,
+                "base_transit_time": 10.3,
+                "delay_probability": 0.18,
+                "estimated_delay_duration": 3.5,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R19-2",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 5904.79,
+                "base_transit_time": 12.9,
+                "delay_probability": 0.35,
+                "estimated_delay_duration": 1.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R19-3",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 8397.68,
+                "base_transit_time": 8.3,
+                "delay_probability": 0.41,
+                "estimated_delay_duration": 2.0,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1020",
+        "cargo_type": "Perishable",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R20-1",
+                "origin": "Singapore",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 5496.8,
+                "base_transit_time": 10.3,
+                "delay_probability": 0.08,
+                "estimated_delay_duration": 3.7,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R20-2",
+                "origin": "Singapore",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 11044.93,
+                "base_transit_time": 10.9,
+                "delay_probability": 0.06,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R20-3",
+                "origin": "Singapore",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 4891.73,
+                "base_transit_time": 28.5,
+                "delay_probability": 0.34,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R20-4",
+                "origin": "Singapore",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 5089.63,
+                "base_transit_time": 15.4,
+                "delay_probability": 0.34,
+                "estimated_delay_duration": 2.0,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R20-5",
+                "origin": "Singapore",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 14832.88,
+                "base_transit_time": 10.4,
+                "delay_probability": 0.4,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1021",
+        "cargo_type": "Hazardous",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R21-1",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 9490.24,
+                "base_transit_time": 10.8,
+                "delay_probability": 0.39,
+                "estimated_delay_duration": 4.2,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R21-2",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 12658.28,
+                "base_transit_time": 16.7,
+                "delay_probability": 0.13,
+                "estimated_delay_duration": 1.5,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R21-3",
+                "origin": "Rotterdam",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 10803.78,
+                "base_transit_time": 14.6,
+                "delay_probability": 0.28,
+                "estimated_delay_duration": 1.4,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1022",
+        "cargo_type": "Perishable",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R22-1",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 13775.68,
+                "base_transit_time": 6.8,
+                "delay_probability": 0.18,
+                "estimated_delay_duration": 2.7,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R22-2",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 3882.65,
+                "base_transit_time": 23.1,
+                "delay_probability": 0.28,
+                "estimated_delay_duration": 1.4,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R22-3",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 4962.92,
+                "base_transit_time": 28.6,
+                "delay_probability": 0.38,
+                "estimated_delay_duration": 4.5,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R22-4",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 4383.75,
+                "base_transit_time": 23.1,
+                "delay_probability": 0.14,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R22-5",
+                "origin": "Los Angeles",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 10871.11,
+                "base_transit_time": 7.1,
+                "delay_probability": 0.33,
+                "estimated_delay_duration": 2.4,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1023",
+        "cargo_type": "Hazardous",
+        "priority_profile": "risk_averse",
+        "routes": [
+            {
+                "route_id": "R23-1",
+                "origin": "Shanghai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 14409.15,
+                "base_transit_time": 6.7,
+                "delay_probability": 0.27,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R23-2",
+                "origin": "Shanghai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 13627.2,
+                "base_transit_time": 16.5,
+                "delay_probability": 0.19,
+                "estimated_delay_duration": 3.6,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R23-3",
+                "origin": "Shanghai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 8862.79,
+                "base_transit_time": 22.0,
+                "delay_probability": 0.17,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R23-4",
+                "origin": "Shanghai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 10099.27,
+                "base_transit_time": 21.0,
+                "delay_probability": 0.15,
+                "estimated_delay_duration": 1.9,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R23-5",
+                "origin": "Shanghai",
+                "destination": "New York",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 14560.07,
+                "base_transit_time": 10.9,
+                "delay_probability": 0.08,
+                "estimated_delay_duration": 2.3,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1024",
+        "cargo_type": "Perishable",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R24-1",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 7351.88,
+                "base_transit_time": 15.3,
+                "delay_probability": 0.17,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R24-2",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 10652.89,
+                "base_transit_time": 6.5,
+                "delay_probability": 0.08,
+                "estimated_delay_duration": 4.8,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R24-3",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 5108.57,
+                "base_transit_time": 23.8,
+                "delay_probability": 0.1,
+                "estimated_delay_duration": 2.4,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R24-4",
+                "origin": "Rotterdam",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 8316.71,
+                "base_transit_time": 8.7,
+                "delay_probability": 0.24,
+                "estimated_delay_duration": 3.4,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1025",
+        "cargo_type": "Perishable",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R25-1",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 11721.23,
+                "base_transit_time": 27.3,
+                "delay_probability": 0.32,
+                "estimated_delay_duration": 2.2,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R25-2",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 4363.7,
+                "base_transit_time": 5.2,
+                "delay_probability": 0.28,
+                "estimated_delay_duration": 2.4,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R25-3",
+                "origin": "Shanghai",
+                "destination": "Mumbai",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 14029.83,
+                "base_transit_time": 9.2,
+                "delay_probability": 0.18,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1026",
+        "cargo_type": "Hazardous",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R26-1",
+                "origin": "Dubai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 10731.54,
+                "base_transit_time": 5.5,
+                "delay_probability": 0.32,
+                "estimated_delay_duration": 4.2,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R26-2",
+                "origin": "Dubai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 12452.49,
+                "base_transit_time": 23.4,
+                "delay_probability": 0.36,
+                "estimated_delay_duration": 3.4,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R26-3",
+                "origin": "Dubai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 9599.52,
+                "base_transit_time": 18.3,
+                "delay_probability": 0.21,
+                "estimated_delay_duration": 4.9,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R26-4",
+                "origin": "Dubai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 8109.51,
+                "base_transit_time": 9.9,
+                "delay_probability": 0.23,
+                "estimated_delay_duration": 1.0,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R26-5",
+                "origin": "Dubai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 5691.46,
+                "base_transit_time": 24.1,
+                "delay_probability": 0.09,
+                "estimated_delay_duration": 2.4,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1027",
+        "cargo_type": "General",
+        "priority_profile": "budget_optimized",
+        "routes": [
+            {
+                "route_id": "R27-1",
+                "origin": "Rotterdam",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 13436.75,
+                "base_transit_time": 29.4,
+                "delay_probability": 0.41,
+                "estimated_delay_duration": 2.5,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R27-2",
+                "origin": "Rotterdam",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 9161.57,
+                "base_transit_time": 22.1,
+                "delay_probability": 0.18,
+                "estimated_delay_duration": 3.8,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R27-3",
+                "origin": "Rotterdam",
+                "destination": "London",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 9779.06,
+                "base_transit_time": 15.6,
+                "delay_probability": 0.43,
+                "estimated_delay_duration": 3.3,
+                "risk_indicator": "Low"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1028",
+        "cargo_type": "Hazardous",
+        "priority_profile": "time_critical",
+        "routes": [
+            {
+                "route_id": "R28-1",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 5208.74,
+                "base_transit_time": 17.4,
+                "delay_probability": 0.44,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R28-2",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 6313.55,
+                "base_transit_time": 19.9,
+                "delay_probability": 0.22,
+                "estimated_delay_duration": 1.4,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R28-3",
+                "origin": "Los Angeles",
+                "destination": "Hamburg",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 12218.63,
+                "base_transit_time": 27.8,
+                "delay_probability": 0.06,
+                "estimated_delay_duration": 2.6,
+                "risk_indicator": "High"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1029",
+        "cargo_type": "General",
+        "priority_profile": "budget_optimized",
+        "routes": [
+            {
+                "route_id": "R29-1",
+                "origin": "Shanghai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 10473.85,
+                "base_transit_time": 5.4,
+                "delay_probability": 0.2,
+                "estimated_delay_duration": 1.5,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R29-2",
+                "origin": "Shanghai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Rotterdam",
+                    "Antwerp"
+                ],
+                "cost": 6668.53,
+                "base_transit_time": 29.0,
+                "delay_probability": 0.42,
+                "estimated_delay_duration": 2.7,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R29-3",
+                "origin": "Shanghai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 13228.66,
+                "base_transit_time": 20.9,
+                "delay_probability": 0.19,
+                "estimated_delay_duration": 4.5,
+                "risk_indicator": "Medium"
+            },
+            {
+                "route_id": "R29-4",
+                "origin": "Shanghai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Colombo",
+                    "Suez"
+                ],
+                "cost": 6833.23,
+                "base_transit_time": 27.6,
+                "delay_probability": 0.28,
+                "estimated_delay_duration": 4.3,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R29-5",
+                "origin": "Shanghai",
+                "destination": "Sydney",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 4539.44,
+                "base_transit_time": 10.5,
+                "delay_probability": 0.05,
+                "estimated_delay_duration": 2.6,
+                "risk_indicator": "Medium"
+            }
+        ]
+    },
+    {
+        "shipment_id": "SHP-1030",
+        "cargo_type": "High-Value",
+        "priority_profile": "balanced",
+        "routes": [
+            {
+                "route_id": "R30-1",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 13188.96,
+                "base_transit_time": 16.4,
+                "delay_probability": 0.12,
+                "estimated_delay_duration": 4.6,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R30-2",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Doha"
+                ],
+                "cost": 12898.23,
+                "base_transit_time": 23.7,
+                "delay_probability": 0.12,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "Low"
+            },
+            {
+                "route_id": "R30-3",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Busan",
+                    "Le Havre"
+                ],
+                "cost": 14356.0,
+                "base_transit_time": 17.2,
+                "delay_probability": 0.4,
+                "estimated_delay_duration": 3.0,
+                "risk_indicator": "High"
+            },
+            {
+                "route_id": "R30-4",
+                "origin": "Shanghai",
+                "destination": "Tokyo",
+                "intermediate_hubs": [
+                    "Panama",
+                    "Miami"
+                ],
+                "cost": 13034.59,
+                "base_transit_time": 8.6,
+                "delay_probability": 0.1,
+                "estimated_delay_duration": 4.4,
+                "risk_indicator": "High"
+            }
+        ]
+    }
+]
