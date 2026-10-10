@@ -89,15 +89,50 @@ aiqon-shipment-optimizer/
 ```
 ---
 
-### Commands To execute:
-  1. **Activate virtual environment**:
-           ----- python -m venv .venv
-           In Powershell:    .\.venv\Scripts\Activate.ps1
-           In Command Prompt:     .\.venv\Scripts\activate.bat
-           In Git Bash:     source .venv/Scripts/activate
-  2. **Install all required libraries**:
-           ---- pip install -r requirements.txt
-  3. **Backend**:
-           ---- uvicorn src.main:app --reload --port 8000
-  4. **Frontend**:
-           ---- python -m http.server 8080 --directory frontend   
+## 🛠️ Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### 1. Environment Setup
+
+First, create the virtual environment, then activate it based on your operating system or terminal.
+
+```bash
+# Create the virtual environment
+python -m venv .venv
+
+# Activate the environment:
+# Windows (PowerShell)
+.\.venv\Scripts\Activate.ps1
+
+# Windows (Command Prompt)
+.\.venv\Scripts\activate.bat
+
+# Linux / macOS / Git Bash
+source .venv/Scripts/activate
+```
+
+### 2. Install Dependencies
+
+Ensure your virtual environment is active, then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Running the Application
+
+You will need two separate terminal windows or tabs to run the services concurrently.
+
+#### Start the Backend
+```bash
+uvicorn src.main:app --reload --port 8000
+```
+* The backend API will be live at: `http://localhost:8000`
+* Interactive API docs (Swagger UI): `http://localhost:8000/docs`
+
+#### Start the Frontend
+```bash
+python -m http.server 8080 --directory frontend
+```
+* The frontend application will be live at: `http://localhost:8080` 
