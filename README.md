@@ -19,33 +19,34 @@ Rather than relying on brittle static formulas or optimizing for a single metric
 
 ## 🏗️ System Architecture & Design Logic
 
+```text
 [ Shipment Request / Payload ]
-│
-▼
+             │
+             ▼
 ┌───────────────────┐
-│  Priority Profile │  ──> Dynamic Weights (Time-Critical, Budget, Risk-Averse)
+│ Priority Profile  │ ──> Dynamic Weights (Time-Critical, Budget, Risk-Averse)
 └───────────────────┘
-│
-▼
+             │
+             ▼
 ┌───────────────────┐
-│ Uncertainty Engine│  ──> Expected Transit Time = Base Time + (Delay Prob × Delay Dur)
+│Uncertainty Engine │ ──> Expected Transit Time = Base Time + (Delay Prob × Delay Dur)
 └───────────────────┘
-│
-▼
+             │
+             ▼
 ┌───────────────────┐
-│ Min-Max Normalizer│  ──> Scales Cost, Time, & Risk to [0, 1] Normalized Penalty Space
+│Min-Max Normalizer │ ──> Scales Cost, Time, & Risk to [0, 1] Normalized Penalty Space
 └───────────────────┘
-│
-▼
+             │
+             ▼
 ┌───────────────────┐
-│ Weighted Scorer   │  ──> Calculates Composite Penalty Score & Ranks Routes
+│  Weighted Scorer  │ ──> Calculates Composite Penalty Score & Ranks Routes
 └───────────────────┘
-│
-▼
+             │
+             ▼
 ┌───────────────────┐
-│ Contrastive Engine│  ──> Generates Human-Readable Explanation (Rank 1 vs. Runner-Up)
+│Contrastive Engine │ ──> Generates Human-Readable Explanation (Rank 1 vs. Runner-Up)
 └───────────────────┘
-
+```
 
 ### Key Technical Pillars
 1. **Uncertainty Adjustment**: Instead of using raw transit estimates, the system models delay risk by calculating **Expected Transit Time**:
