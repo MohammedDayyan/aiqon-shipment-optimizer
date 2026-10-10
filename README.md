@@ -86,3 +86,17 @@ aiqon-shipment-optimizer/
 ├── docker-compose.yml             # Orchestration for API service
 ├── requirements.txt               # Locked project dependencies
 └── README.md
+'''
+
+Commands To execute:
+    Activate virtual environment:
+           ----- python -m venv .venv
+           In Powershell:    .\.venv\Scripts\Activate.ps1
+           In Command Prompt:     .\.venv\Scripts\activate.bat
+           In Git Bash:     source .venv/Scripts/activate
+    Install all required libraries:
+           ---- pip install -r requirements.txt
+    Backend:
+           ---- uvicorn src.main:app --reload --port 8000
+    Frontend:
+           ---- python -m http.server 8080 --directory frontend   
