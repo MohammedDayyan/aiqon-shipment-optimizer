@@ -5,6 +5,8 @@ from src.engine.normalizer import normalize_routes
 from src.engine.profiles import get_profile_weights
 from src.engine.pareto import filter_pareto_optimal_routes
 
+logger = logging.getLogger("aiqon.scorer")
+
 def evaluate_and_rank_routes(routes: List[RouteOption], priority_profile: str) -> List[dict]:
     """
     Scores and ranks routes using Pareto filtering, uncertainty adjustment, and weighted penalty models.

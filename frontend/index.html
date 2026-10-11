@@ -289,7 +289,7 @@
                 if (!response.ok) {
                     const err = await response.json();
                     alert('Error: ' + JSON.stringify(err.detail));
-                    return;
+                    return false;
                 }
 
                 const data = await response.json();
@@ -317,18 +317,23 @@
                     `;
                     tbody.appendChild(row);
                 });
+                return true;
 
             } catch (error) {
                 alert('Failed to connect to backend API. Ensure FastAPI is running on port 8000.');
                 console.error(error);
+                return false;
             }
         }
 
         async function runSensitivityAnalysis() {
+            // The results card is shared with the recommendation view, so populate it first.
+            if (!await evaluateRoutes()) return;
+
             const payload = gatherPayload();
 
             try {
-                const response = await fetch('http://localhost:8000/sensitivity-analysis', {
+                const response = await fetch('http://localhost:8000/sensitivity_analysis', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
