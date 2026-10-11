@@ -9,7 +9,6 @@
 
 Built for the **Aiqon AI Internship take-home assignment**: *Optimizing Shipment Routes Under Cost, Time, and Risk Constraints*.
 
-> **Reading guide:** items marked `TODO` are placeholders for values from the code or experiments. Fill or delete them before submitting.
 
 **Deliverables**
 
@@ -17,7 +16,6 @@ Built for the **Aiqon AI Internship take-home assignment**: *Optimizing Shipment
 |---|---|
 | Code repository | this repo |
 | Technical report (2-3 pages) | [`docs/technical_report.pdf`](docs/technical_report.pdf) |
-| Demo (≤ 5 min) | `TODO: add link` |
 
 ---
 
@@ -97,18 +95,17 @@ Composite score:        Score = w_cost · cost' + w_time · E[T]' + w_risk · ri
 
 ### Profiles and weights
 
-`TODO: replace with the real values from src/engine/profiles.py`
 
 | Profile | w_cost | w_time | w_risk |
 |---|---|---|---|
-| `balanced` | TODO | TODO | TODO |
-| `time_critical` | TODO | TODO | TODO |
-| `budget_optimized` | TODO | TODO | TODO |
-| `risk_averse` | TODO | TODO | TODO |
+| `balanced` | 0.35 | 0.35 | 0.30 |
+| `time_critical` | 0.15 | 0.55 | 0.30 |
+| `budget_optimized` | 0.65 | 0.15 | 0.20 |
+| `risk_averse` | 0.15 | 0.25 | 0.60 |
 
 ### Risk mapping
 
-Categorical risk (Low / Medium / High) is mapped to numeric penalties before normalization: `TODO: Low = ?, Medium = ?, High = ?`.
+Categorical risk (Low / Medium / High) is mapped to numeric penalties before normalization: `TODO: Low = 0.1, Medium = 0.5, High = 0.9`.
 
 ---
 
@@ -205,7 +202,6 @@ python -m http.server 8080 --directory frontend
 docker compose up --build
 ```
 
-`TODO: confirm which service/ports docker-compose.yml exposes and whether it serves the frontend.`
 
 ### Regenerate the synthetic dataset
 
@@ -213,7 +209,7 @@ docker compose up --build
 python data/generator.py
 ```
 
-`TODO: confirm the command, any CLI flags, and the random seed.`
+Command : python -m data.generator
 
 ### Run the tests
 
@@ -225,34 +221,214 @@ pytest tests/ -v
 
 ## 6. Example input and output
 
-`TODO: replace the illustration below with a real request and response from your API (copy from /docs).`
+Test /recommend (Multi-Objective Route Recommendation)
+Endpoint: POST /recommend
 
-**Request** (illustrative):
-
-```json
-{
-  "shipment_id": "SHP-001",
-  "origin": "Mumbai",
-  "destination": "Rotterdam",
-  "priority": "balanced"
-}
-```
-
-**Response** (illustrative):
+**JSON Input Payload**:
 
 ```json
 {
-  "recommended_route": "R2",
-  "ranking": [
-    { "route_id": "R2", "score": 0.21 },
-    { "route_id": "R1", "score": 0.34 },
-    { "route_id": "R3", "score": 0.58 }
-  ],
-  "explanation": "R2 costs ~12% more than R1 but cuts delay risk substantially and is expected to arrive earlier once delays are factored in. Under the 'balanced' profile this trade-off is worth it."
+  "shipment_id": "SHP-2026-TEST",
+  "cargo_type": "Perishable",
+  "priority_profile": "time_critical",
+  "routes": [
+    {
+      "route_id": "Route-A",
+      "origin": "Singapore",
+      "destination": "Hamburg",
+      "intermediate_hubs": ["Colombo"],
+      "cost": 11500.0,
+      "base_transit_time": 9.0,
+      "delay_probability": 0.05,
+      "estimated_delay_duration": 1.0,
+      "risk_indicator": "Low"
+    },
+    {
+      "route_id": "Route-B",
+      "origin": "Singapore",
+      "destination": "Hamburg",
+      "intermediate_hubs": ["Suez"],
+      "cost": 7400.0,
+      "base_transit_time": 15.0,
+      "delay_probability": 0.25,
+      "estimated_delay_duration": 3.0,
+      "risk_indicator": "Medium"
+    },
+    {
+      "route_id": "Route-C",
+      "origin": "Singapore",
+      "destination": "Hamburg",
+      "intermediate_hubs": ["Cape of Good Hope"],
+      "cost": 4900.0,
+      "base_transit_time": 24.0,
+      "delay_probability": 0.40,
+      "estimated_delay_duration": 5.0,
+      "risk_indicator": "High"
+    }
+  ]
 }
 ```
 
-Add a dashboard screenshot here: `![Dashboard](docs/dashboard.png)`
+**Response** :
+
+```json
+{
+  "shipment_id": "SHP-2026-TEST",
+  "recommended_route_id": "Route-A",
+  "confidence_score": 0.99,
+  "explanation": "Recommended Route 'Route-A' under the 'time_critical' priority profile. While Route 'Route-A' is 55.4% more expensive ($11500.0 vs $7400.0), it was selected because it reduces expected transit time by 6.7 days and mitigates disruption risk compared to runner-up 'Route-B'.",
+  "evaluated_routes": [
+    {
+      "route_id": "Route-A",
+      "cost": 11500,
+      "expected_transit_time": 9.05,
+      "risk_indicator": "Low",
+      "composite_score": 0.15
+    },
+    {
+      "route_id": "Route-B",
+      "cost": 7400,
+      "expected_transit_time": 15.75,
+      "risk_indicator": "Medium",
+      "composite_score": 0.4242
+    },
+    {
+      "route_id": "Route-C",
+      "cost": 4900,
+      "expected_transit_time": 26,
+      "risk_indicator": "High",
+      "composite_score": 0.85
+    }
+  ]
+}
+```
+
+Test /sensitivity-analysis (Testing Decision Robustness)
+Endpoint: POST /sensitivity-analysis
+
+**JSON Input Payload**:
+```json
+{
+  "shipment_id": "SHP-2026-SENSITIVITY",
+  "cargo_type": "High-Value",
+  "priority_profile": "risk_averse",
+  "routes": [
+    {
+      "route_id": "Route-Alpha",
+      "origin": "Shanghai",
+      "destination": "New York",
+      "intermediate_hubs": ["Panama"],
+      "cost": 9800.0,
+      "base_transit_time": 12.0,
+      "delay_probability": 0.10,
+      "estimated_delay_duration": 1.0,
+      "risk_indicator": "Low"
+    },
+    {
+      "route_id": "Route-Beta",
+      "origin": "Shanghai",
+      "destination": "New York",
+      "intermediate_hubs": ["Los Angeles"],
+      "cost": 6100.0,
+      "base_transit_time": 18.0,
+      "delay_probability": 0.30,
+      "estimated_delay_duration": 3.0,
+      "risk_indicator": "Medium"
+    }
+  ]
+}
+```
+
+**Response**:
+```json
+{
+  "shipment_id": "SHP-2026-SENSITIVITY",
+  "sensitivity_analysis": {
+    "is_decision_stable": false,
+    "scenarios": [
+      {
+        "scenario": "Cost-Dominant",
+        "applied_weights": {
+          "weight_cost": 0.8,
+          "weight_time": 0.1,
+          "weight_risk": 0.1
+        },
+        "optimal_route": "Route-Beta",
+        "all_scores": [
+          {
+            "route_id": "Route-Beta",
+            "score": 0.2
+          },
+          {
+            "route_id": "Route-Alpha",
+            "score": 0.8
+          }
+        ]
+      },
+      {
+        "scenario": "Time-Dominant",
+        "applied_weights": {
+          "weight_cost": 0.1,
+          "weight_time": 0.8,
+          "weight_risk": 0.1
+        },
+        "optimal_route": "Route-Alpha",
+        "all_scores": [
+          {
+            "route_id": "Route-Alpha",
+            "score": 0.1
+          },
+          {
+            "route_id": "Route-Beta",
+            "score": 0.9
+          }
+        ]
+      },
+      {
+        "scenario": "Risk-Dominant",
+        "applied_weights": {
+          "weight_cost": 0.1,
+          "weight_time": 0.1,
+          "weight_risk": 0.8
+        },
+        "optimal_route": "Route-Alpha",
+        "all_scores": [
+          {
+            "route_id": "Route-Alpha",
+            "score": 0.1
+          },
+          {
+            "route_id": "Route-Beta",
+            "score": 0.9
+          }
+        ]
+      },
+      {
+        "scenario": "Balanced Equal",
+        "applied_weights": {
+          "weight_cost": 0.33,
+          "weight_time": 0.33,
+          "weight_risk": 0.34
+        },
+        "optimal_route": "Route-Alpha",
+        "all_scores": [
+          {
+            "route_id": "Route-Alpha",
+            "score": 0.33
+          },
+          {
+            "route_id": "Route-Beta",
+            "score": 0.67
+          }
+        ]
+      }
+    ],
+    "stability_note": "Decision is sensitive to weight changes near trade-off boundaries."
+  }
+}
+```
+
+Add a dashboard screenshot here: `![Dashboard](docs/Dashboard_1.png)`
 
 ---
 
@@ -260,12 +436,9 @@ Add a dashboard screenshot here: `![Dashboard](docs/dashboard.png)`
 
 No public dataset has route-level delay distributions, so `data/generator.py` creates synthetic shipments.
 
-- **Size:** `TODO: N shipments`, each with 3-5 candidate routes.
+- **Size:** `30 shipments`, each with 3-5 candidate routes.
 - **Fields per route:** origin, destination, intermediate ports/hubs, cost, base transit time, delay probability, estimated delay duration, risk indicators (e.g. congestion, geopolitical).
-- **Trade-off construction:** `TODO: describe the rules, e.g. faster routes cost more; cheap routes get higher delay probability; routes through high-risk hubs get a higher risk level.`
-- **Seed:** `TODO`
-
-> Because the trade-offs were designed by the author, the data shows the framework *behaves sensibly*. It cannot prove the recommendations would be *correct* on real shipments.
+- **Trade-off construction:**Global logistics routing requires balancing competing objectives across a dataset of 20 to 50 shipments, with each shipment evaluating 3 to 5 distinct route options. Fundamental economic trade-offs dictate that faster routes incur higher financial costs, whereas cheaper alternatives often compromise reliability by introducing higher delay probabilities and handling bottlenecks.   In addition, paths traversing congested or geopolitically volatile intermediate ports are assigned elevated risk indicators, such as medium or high threat levels. To accurately handle operational uncertainty, our decision framework computes expected transit times by factoring in delay probabilities and potential delay durations across these multi-leg routes.
 
 ---
 
@@ -276,7 +449,7 @@ No public dataset has route-level delay distributions, so `data/generator.py` cr
 - Risk categories are ordinal and mapped to numeric penalties.
 - Profile weights are hand-set expert judgments, not learned or calibrated.
 - Each shipment is optimized in isolation: no capacity limits, no interaction between shipments, no live data.
-- `TODO: state whether delay probability / risk are modelled per leg or per route.`
+
 
 ---
 
@@ -305,6 +478,4 @@ In priority order:
 6. Validate on real shipment data and calibrate weights from operator decisions.
 
 ---
-## 11. License
 
-MIT. See [`LICENSE`](LICENSE). `TODO: add the LICENSE file to the repo.`
