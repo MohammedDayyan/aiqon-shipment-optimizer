@@ -428,7 +428,7 @@ Endpoint: POST /sensitivity-analysis
 }
 ```
 
-Add a dashboard screenshot here: `![Dashboard](https://raw.githubusercontent.com/MohammedDayyan/aiqon-shipment-optimizer/main/docs/Dashboard_1.png)`
+Add a dashboard screenshot here: `![Dashboard](docs/Dashboard_1.png)`
 
 ---
 
