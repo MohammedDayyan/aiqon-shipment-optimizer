@@ -428,7 +428,7 @@ Endpoint: POST /sensitivity-analysis
 }
 ```
 
-Add a dashboard screenshot here: `![Dashboard](docs/Dashboard_1.png)`
+See the dashboard screenshot here: `![Dashboard](docs/Dashboard_1.png)`
 
 ---
 
